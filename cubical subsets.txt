@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main() {
+   int t;
+   scanf("%d",&t);
+   while(t--)
+   {
+       int n,m,cube,count=0;
+       scanf("%d %d",&n,&m);
+       int a[n],b[m],i,j,s;
+       for(i=0;i<n;i++)
+       {
+           scanf("%d",&a[i]);
+       }
+           for(j=0;j<m;j++)
+           {
+            scanf("%d",&b[j]);   
+           }
+           for(i=0;i<n;i++)
+           {
+               for(j=0;j<m;j++)
+               {
+                  s =a[i]*b[j];
+                  	cube = round(pow(s,1.0/3.0));
+                  	if(cube*cube*cube==s){
+               count++;
+                  	}
+					  }
+				}
+				if(count>=1){
+					printf("%d\n",2*count*count);
+				}
+				else{
+					printf("-1\n");
+				}
+				}
+			}
+
+
+
+
+
+
+
+
+3
+3 2
+2 2 8
+16 2
+-1
+
+4 4
+4 2 3 5
+2 4 9 5
+18
